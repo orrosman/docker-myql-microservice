@@ -20,7 +20,7 @@ module.exports = (app, options) => {
 			.catch(next);
 	});
 
-	app.get('/search', (req, res) => {
+	app.get('/search', (req, res, next) => {
 		//  Get the email.
 		var email = req.query.email;
 		if (!email) {
